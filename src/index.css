@@ -12,3 +12,26 @@ code {
     monospace;
 }
 
+.links {
+  color: white;
+  font-size: 50px;
+  text-decoration: none;
+  margin: 50px;
+}
+
+.home {
+  background-color: black;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+button {
+  color: white;
+  background-color: black;
+  font-size: 23px;
+  padding: 10px;
+  margin: 8px;
+}

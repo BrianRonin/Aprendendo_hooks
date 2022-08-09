@@ -31,6 +31,17 @@
   color: #61dafb;
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: #282c34;
+}
+
+input {
+  margin-top: 20px;
+  width: 50%;
+  font-size: 30px;
+  border: 0px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

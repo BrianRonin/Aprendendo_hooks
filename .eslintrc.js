@@ -35,5 +35,7 @@ module.exports = {
     'spaced-comment': 0,
     'react/forbid-prop-types': 0,
     'react/react-in-jsx-scope': 0,
+    'react-hooks/rules-of-hooks': 'error', // Verifica as regras dos Hooks
+    'react-hooks/exhaustive-deps': 'warn', // Verifica as dependências de effects
   },
 }
