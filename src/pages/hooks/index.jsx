@@ -98,6 +98,9 @@ function HOOKS() {
           className={`App-logo${isReverseLogo ? ' reverse' : ''}`}
           alt='logo'
         />
+        <a href='/hooks/context'>
+          <button>Context State</button>
+        </a>
         <h1 id='dada'>contador: {counter}</h1>
         <button onClick={reverse}>change rotation</button>
         <button onClick={counterMore}>++++++++++</button>

@@ -5,11 +5,7 @@ module.exports = {
     node: true,
     'jest/globals': true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -17,7 +13,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'jest', 'react-hooks'],
+  plugins: ['react', 'jest'],
   settings: {
     react: {
       version: 'detect',
@@ -35,7 +31,5 @@ module.exports = {
     'spaced-comment': 0,
     'react/forbid-prop-types': 0,
     'react/react-in-jsx-scope': 0,
-    'react-hooks/rules-of-hooks': 'error', // Verifica as regras dos Hooks
-    'react-hooks/exhaustive-deps': 'warn', // Verifica as dependências de effects
   },
 }

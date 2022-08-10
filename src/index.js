@@ -4,8 +4,9 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import Home from './App'
 import HOOKS from './pages/hooks'
+import criandoHooks from './pages/criandoHooks'
 import reportWebVitals from './reportWebVitals'
-import Context from './pages/hooks/context'
+import Context from './pages/context'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -14,7 +15,8 @@ root.render(
       <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/hooks' component={HOOKS} exact />
-        <Route path='/hooks/context' component={Context} exact />
+        <Route path='/context' component={Context} exact />
+        <Route path='/criando' component={criandoHooks} />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

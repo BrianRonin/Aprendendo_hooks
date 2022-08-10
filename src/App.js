@@ -5,9 +5,21 @@ export default class Home extends Component {
   render() {
     return (
       <div className='App home'>
-        <a className='links' href='/hooks'>
-          Hooks
-        </a>
+        <span>
+          <a className='links' href='/criando'>
+            CriandoHooks
+          </a>
+        </span>
+        <span>
+          <a className='links' href='/hooks'>
+            Hooks
+          </a>
+        </span>
+        <span>
+          <a className='links' href='/Context'>
+            Context
+          </a>
+        </span>
       </div>
     )
   }
