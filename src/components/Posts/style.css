@@ -19,3 +19,7 @@ p {
   background: url('./loading.gif') no-repeat center;
   z-index: 999;
 }
+
+img {
+  width: auto;
+}

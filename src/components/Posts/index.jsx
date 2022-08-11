@@ -19,17 +19,21 @@ export const Posts = () => {
   console.log(postsState.isLoading)
   return (
     <div>
-      <h1>
-        {!!postsState.isLoading && <div id='loader' ref={loader}></div>}
-        {postsState.posts.map((post, index) => {
-          return (
-            <div key={index}>
-              <h1>{post.title}</h1>
-              <p>{post.body}</p>
-            </div>
-          )
-        })}
-      </h1>
+      <img
+        src='../../pages/refatorandoHooks/refatorandoMinificado.png'
+        alt='refatorando'
+        width='500'
+        height='600'
+      />
+      {!!postsState.isLoading && <div id='loader' ref={loader}></div>}
+      {postsState.posts.map((post, index) => {
+        return (
+          <div key={index}>
+            <h1>{post.title}</h1>
+            <p>{post.body}</p>
+          </div>
+        )
+      })}
     </div>
   )
 }
