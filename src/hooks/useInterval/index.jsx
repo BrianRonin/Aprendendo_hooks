@@ -1,12 +1,18 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
-const useIntervall = (cb, delay = 1000) => {
+function useIntervall(cb, delay) {
+  const saveCb = useRef()
+
+  useEffect(() => {
+    saveCb.current = cb
+  }, [cb])
+
   useEffect(() => {
     const interval = setInterval(() => {
-      cb()
+      saveCb.current()
     }, delay)
     return () => clearInterval(interval)
-  }, [cb])
+  }, [delay])
 }
 
 export default useIntervall

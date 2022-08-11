@@ -1,4 +1,4 @@
-import React, { createContext, useState, useReducer, useRef } from 'react'
+import React, { createContext, useReducer, useRef } from 'react'
 import './style.css'
 
 import { globalState } from '../../contexts/context/data'
@@ -30,16 +30,13 @@ export const GlobalContext = createContext()
 // oque tipo de modificacao que voce passa se chama type
 // 1. criar um obj com todas as ações possiveis e utilizar
 const actions = {
+  // 2. actions.js
   CHANGE_TITTLE: 'CHANGE_TITTLE',
   INCREMENT_COUNT: 'INCREMENT_COUNT',
 }
 
 function changeTittle(payload) {
   return { type: actions.CHANGE_TITTLE, payload: payload }
-}
-
-function incrementCount() {
-  return { type: actions.INCREMENT_COUNT }
 }
 // 2. criar uma função pra cada ação que retorna o comando utilizando o obj acima
 

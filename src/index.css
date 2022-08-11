@@ -16,16 +16,18 @@ code {
   color: white;
   font-size: 50px;
   text-decoration: none;
-  margin: 50px;
+  margin: 60px;
 }
 
 .home {
   background-color: black;
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  gap: 50px;
 }
 
 button {

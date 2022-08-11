@@ -5,21 +5,26 @@ export default class Home extends Component {
   render() {
     return (
       <div className='App home'>
-        <span>
+        <h1>
           <a className='links' href='/criando'>
             CriandoHooks
           </a>
-        </span>
-        <span>
+        </h1>
+        <h1>
           <a className='links' href='/hooks'>
             Hooks
           </a>
-        </span>
-        <span>
+        </h1>
+        <h1>
           <a className='links' href='/Context'>
             Context
           </a>
-        </span>
+        </h1>
+        <h1>
+          <a className='links' href='/refatorado'>
+            Refatorado
+          </a>
+        </h1>
       </div>
     )
   }

@@ -5,6 +5,7 @@ import './index.css'
 import Home from './App'
 import HOOKS from './pages/hooks'
 import criandoHooks from './pages/criandoHooks'
+import Refatorando from './pages/refatorandoHooks'
 import reportWebVitals from './reportWebVitals'
 import Context from './pages/context'
 
@@ -17,6 +18,7 @@ root.render(
         <Route path='/hooks' component={HOOKS} exact />
         <Route path='/context' component={Context} exact />
         <Route path='/criando' component={criandoHooks} />
+        <Route path='/refatorado' component={Refatorando} />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,
