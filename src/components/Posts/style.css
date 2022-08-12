@@ -21,5 +21,14 @@ p {
 }
 
 img {
-  width: auto;
+}
+
+#count {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#count > span {
+  font-size: 50px;
 }

@@ -28,7 +28,7 @@ function HOOKS() {
   const [counter2, setCounter2] = useState(0)
   const [posts, setPosts] = useState([])
   const [value, setValue] = useState('')
-  /**
+  /** USANDO CALLBACK
    * Um ponto negativo da função pra classe no react é que não tem um metodo
    * Render. então toda vez que for atualizar o retorno todas essas funções
    * abaixo são recriadas quando uma função for muito pesada ai sim é

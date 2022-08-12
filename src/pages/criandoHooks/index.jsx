@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import './style.css'
 //import useIntervall from '../../hooks/useInterval'
 /**
@@ -11,12 +11,19 @@ import './style.css'
  * componente
  */
 import useIntervall from '../../hooks/useInterval'
+import useFetch from '../../hooks/useFetch'
 
 function CriandoH() {
   const [state, setState] = useState(0)
   const [delay, setDelay] = useState(1000)
   const [incrementor, setIncrementor] = useState(100)
-  useIntervall(() => setState((s) => s + 1), delay)
+
+  const [result, loading] = useFetch(
+    'https://jsonplaceholder.typicode.com/posts',
+  )
+
+  console.log(result, loading)
+  //useIntervall(() => setState((s) => s + 1), delay)
   return (
     <>
       <div>
@@ -26,10 +33,10 @@ function CriandoH() {
           </a>
           <span>Counter {state}</span>
           <span>delay:{delay}</span>
-          <button onClick={(e) => setDelay((s) => s + Number(incrementor))}>
+          <button onClick={() => setDelay((s) => s + Number(incrementor))}>
             + {incrementor}
           </button>
-          <button onClick={(e) => setDelay((s) => s - Number(incrementor))}>
+          <button onClick={() => setDelay((s) => s - Number(incrementor))}>
             - {incrementor}
           </button>
           <input
