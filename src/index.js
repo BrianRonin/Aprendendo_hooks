@@ -11,7 +11,7 @@ import Context from './pages/context'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
+  <React.Suspense>
     <BrowserRouter>
       <Switch>
         <Route path='/' component={Home} exact />
@@ -21,7 +21,7 @@ root.render(
         <Route path='/refatorado' component={Refatorando} />
       </Switch>
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.Suspense>,
 )
 
 // If you want to start measuring performance in your app, pass a function

@@ -12,18 +12,52 @@ import './style.css'
  */
 import useIntervall from '../../hooks/useInterval'
 import useFetch from '../../hooks/useFetch'
+import useAsync from '../../hooks/useAsync'
 
 function CriandoH() {
+  const [postId, setPostId] = useState('')
   const [state, setState] = useState(0)
   const [delay, setDelay] = useState(1000)
+  const [posts, setPosts] = useState(null)
   const [incrementor, setIncrementor] = useState(100)
-
   const [result, loading] = useFetch(
-    'https://jsonplaceholder.typicode.com/posts',
+    'https://jsonplaceholder.typicode.com/posts/' + postId,
+    {
+      method: 'GET',
+      headers: {
+        abc: 1,
+      },
+    },
   )
+  console.log(result)
+  async function falar() {
+    await new Promise((r) => setTimeout(r, 5000))
+    return 'falando'
+  }
 
-  console.log(result, loading)
+  const [reFalar, resolve, error, status] = useAsync(falar)
+
+  useEffect(() => {
+    reFalar()
+  }, [])
+
+  console.log('resolve', resolve, 'status', status, 'error', error)
+
   //useIntervall(() => setState((s) => s + 1), delay)
+  const handleClick = () => {
+    setPostId('')
+  }
+
+  if (loading) {
+    return (
+      <>
+        <div>
+          <header className='App-header'>LOADING ... {state}</header>
+        </div>
+      </>
+    )
+  }
+
   return (
     <>
       <div>
@@ -43,6 +77,17 @@ function CriandoH() {
             type='text'
             onChange={(e) => setIncrementor(Number(e.target.value))}
           />
+          {posts?.length > 0 ? (
+            posts.map((post, indice) => (
+              <div key={`post-${indice}`}>
+                <p onClick={() => setPostId(indice + 1)}>{post.title}</p>
+              </div>
+            ))
+          ) : (
+            <div onClick={handleClick}>
+              {posts ? <p>{result.body}</p> : <p>loading..</p>}
+            </div>
+          )}
         </header>
       </div>
     </>
