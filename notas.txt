@@ -1,0 +1,11 @@
+todo render retorna um HTMLdivElement com a chave de container
+
+https://stackoverflow.com/questions/34582405/react-wont-load-local-images
+
+ao informar o src local de uma imagem deve usar require pro webpack entender
+src={require('./hook-flow.png')}
+
+
+coisas usadas no teste
+jest/testing library/msw = mock service worker
+

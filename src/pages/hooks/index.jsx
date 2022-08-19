@@ -78,7 +78,8 @@ function HOOKS() {
   const reverse = () => {
     setReverseLogo(!isReverseLogo)
   }
-
+  // ele roda o js apenas quando o dom estiver carregado travando assim a pagina // pouco usado
+  // #### Use layout effect ### https://pt-br.reactjs.org/docs/hooks-reference.html#uselayouteffect
   // #### Use Ref #### https://pt-br.reactjs.org/docs/hooks-reference.html#useref
   /**
    * Use ref é uma otima maneira de pegar referencia

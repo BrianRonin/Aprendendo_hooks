@@ -9,6 +9,11 @@ function Refatorando() {
         <CountProvider>
           <PostsProvider>
             <header className='App-header'>
+              <img
+                width={'1000px'}
+                src={require('./refatorando _coponents.png')}
+                alt=''
+              />
               <Posts />
             </header>
           </PostsProvider>

@@ -6,8 +6,14 @@ import Home from './App'
 import HOOKS from './pages/hooks'
 import criandoHooks from './pages/criandoHooks'
 import Refatorando from './pages/refatorandoHooks'
+import OtherHooks from './pages/otherHooks'
+import HooksFlow from './pages/hooksFlow'
+import Testes from './pages/useMediaQuery'
 import reportWebVitals from './reportWebVitals'
 import Context from './pages/context'
+import ErrorBoundaryTest from './pages/errorBoundary'
+import CompoundComponent from './pages/compoundComponents'
+import ReactLazy from './pages/reactLazy'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -19,6 +25,12 @@ root.render(
         <Route path='/context' component={Context} exact />
         <Route path='/criando' component={criandoHooks} />
         <Route path='/refatorado' component={Refatorando} />
+        <Route path='/otherHooks' component={OtherHooks} />
+        <Route path='/testes' component={Testes} />
+        <Route path='/flow' component={HooksFlow} />
+        <Route path='/errorBoundary' component={ErrorBoundaryTest} />
+        <Route path='/compoundComponent' component={CompoundComponent} />
+        <Route path='/reactLazy' component={ReactLazy} />
       </Switch>
     </BrowserRouter>
   </React.Suspense>,
