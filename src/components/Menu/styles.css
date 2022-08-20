@@ -1,0 +1,10 @@
+.menu {
+  height: 24px;
+  width: 100vw;
+  background-color: rgb(26, 25, 23) !important;
+  display: flex;
+  justify-content: center;
+}
+.menu > a {
+  color: cyan;
+}

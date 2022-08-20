@@ -1,6 +1,7 @@
 import { Component } from 'react'
 //import './style.css'
 import './index.css'
+import { Link } from 'react-router-dom'
 
 export default class Home extends Component {
   render() {
@@ -13,54 +14,59 @@ export default class Home extends Component {
         }}
       >
         <h1>
-          <a className='links' href='/criando'>
+          <Link to='criando' className='links'>
             CriandoHooks
-          </a>
+          </Link>
         </h1>
         <h1>
-          <a className='links' href='/hooks'>
+          <Link to={'/hooks'} className='links'>
             Hooks
-          </a>
+          </Link>
         </h1>
         <h1>
-          <a className='links' href='/Context'>
+          <Link to={'/Context'} className='links'>
             Context
-          </a>
+          </Link>
         </h1>
         <h1>
-          <a className='links' href='/refatorado'>
+          <Link to={'/refatorando'} className='links'>
             Refatorado
-          </a>
+          </Link>
         </h1>
         <h1>
-          <a className='links' href='/otherHooks'>
+          <Link to={'/otherHooks'} className='links'>
             OtherHooks
-          </a>
+          </Link>
         </h1>
         <h1>
-          <a className='links' href='/testes'>
-            Testes
-          </a>
+          <Link to={'/testes'} className='links'>
+            useMediaQuery
+          </Link>
         </h1>
         <h1>
-          <a className='links' href='/flow'>
+          <Link to={'/flow'} className='links'>
             Hooks flow
-          </a>
+          </Link>
         </h1>
         <h1>
-          <a className='links' href='/errorBoundary'>
+          <Link to={'/errorBoundary'} className='links'>
             ErrorBoundary
-          </a>
+          </Link>
         </h1>
         <h1>
-          <a className='links' href='/CompoundComponent'>
+          <Link to={'/CompoundComponent'} className='links'>
             Compound Component
-          </a>
+          </Link>
         </h1>
         <h1>
-          <a className='links' href='/reactLazy'>
+          <Link to={'/reactLazy'} className='links'>
             React Lazy
-          </a>
+          </Link>
+        </h1>
+        <h1>
+          <Link to={'/contextAPI'} className='links'>
+            ContextAPI
+          </Link>
         </h1>
       </div>
     )
